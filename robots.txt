@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mrfestivalindia.netlify.app/sitemap.xml
+Sitemap: https://festivalindia01.netlify.app/sitemap.xml

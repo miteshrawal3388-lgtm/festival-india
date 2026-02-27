@@ -183,7 +183,7 @@ Some links on this site are affiliate links and we may earn a commission at no e
 
 <script>
 
-const sheetURL =https://docs.google.com/spreadsheets/d/e/2PACX-1vQTLAIA5oHtXWB238hTxIsolB4vW9khveCUqB9jH_FXUknE4NTDJqKViJUKZ-Cc4iwo0I6r3lxmsLIl/pub?output=csv
+const sheetURL = "YAHAN_APNA_CSV_LINK_DALO";
 
 fetch(sheetURL)
 .then(res => res.text())
@@ -194,7 +194,10 @@ let output = "";
 
 rows.forEach(row => {
 
-const cols = row.split(",");
+if(row.trim() === "") return;
+
+const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+
 const name = cols[0];
 const price = cols[1];
 const oldprice = cols[2];
